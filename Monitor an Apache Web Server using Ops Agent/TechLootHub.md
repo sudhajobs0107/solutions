@@ -4,6 +4,7 @@
     <img src="https://img.shields.io/badge/Open_Lab-Cloud_Skills_Boost-4285F4?style=for-the-badge&logo=google&logoColor=white&labelColor=34A853" alt="Open Lab" style="height: 35px; border-radius: 5px;">
   </a>
 </div>
+
 ---
 
 ## ⚠️ Disclaimer ⚠️
@@ -49,8 +50,5 @@ sudo chmod +x techloothub.sh
 <div align="center">
   <p style="font-size: 12px; color: #586069;">
     <em>This guide is provided for educational purposes. Always follow Qwiklabs terms of service and YouTube's community guidelines.</em>
-  </p>
-  <p style="font-size: 12px; color: #586069;">
-    <em>Last updated: April 2025</em>
   </p>
 </div>
