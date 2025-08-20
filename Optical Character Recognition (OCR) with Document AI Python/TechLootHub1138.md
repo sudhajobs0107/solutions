@@ -18,9 +18,13 @@
 ## ⚙️ Lab Environment Setup
 
 <div style="padding: 15px; margin: 10px 0;">
-<p><strong>☁️ Run in Cloud Shell:</strong></p>
-
-```bash
+<p><strong>☁️ Follow video and Run in Cloud Shell :-</strong></p>
+    
+```
+gcloud services enable documentai.googleapis.com
+gcloud services enable storage.googleapis.com
+```
+```
 curl -LO raw.githubusercontent.com/sudhajobs0107/solutions/refs/heads/main/Optical%20Character%20Recognition%20(OCR)%20with%20Document%20AI%20Python/techloothub1138.sh
 sudo chmod +x techloothub1138.sh
 ./techloothub1138.sh
