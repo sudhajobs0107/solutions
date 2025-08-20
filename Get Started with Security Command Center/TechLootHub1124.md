@@ -27,17 +27,6 @@ sudo chmod +x techloothub1124.sh
 ```
 </div>
 
-<div style="padding: 15px; margin: 10px 0;">
-<p><strong>💡 After scoring `90/100` in the lab, run the below commands and follow the video instructions</strong></p>
-
-```bash
-export ZONE=$(gcloud compute project-info describe \
---format="value(commonInstanceMetadata.items[google-compute-default-zone])")
-
-gcloud compute instances stop eth-mainnet-rpc-node --project=$DEVSHELL_PROJECT_ID --zone=$ZONE && gcloud compute instances set-machine-type eth-mainnet-rpc-node --project=$DEVSHELL_PROJECT_ID --zone=$ZONE --machine-type=e2-standard-4 && gcloud compute instances start eth-mainnet-rpc-node --project=$DEVSHELL_PROJECT_ID --zone=$ZONE
-```
-</div>
-
 ---
 
 ## 🎉 **Congratulations! Lab Completed Successfully!** 🏆  
