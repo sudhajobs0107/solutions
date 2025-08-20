@@ -40,10 +40,11 @@ echo
 # Instruction for setting project ID
 echo "${MAGENTA_TEXT}${BOLD_TEXT}Fetching the current project ID...${RESET_FORMAT}"
 export PROJECT_ID=$(gcloud config get-value project)
+echo $PROJECT_ID
 gcloud scc muteconfigs create muting-pga-findings \
   --description="Mute rule for VPC Flow Logs" \
   --filter='category="FLOW_LOGS_DISABLED"' \
-  --project=$PROJECT_ID
+  --project=projects/$PROJECT_ID
 
 gcloud compute networks create scc-lab-net --subnet-mode=auto
 
