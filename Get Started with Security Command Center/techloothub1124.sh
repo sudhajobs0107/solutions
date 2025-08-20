@@ -37,9 +37,11 @@ echo "${YELLOW_TEXT}||           ${BOLD_TEXT}INITIATING EXECUTION...${RESET_FORM
 echo "${YELLOW_TEXT}===================================================${RESET_FORMAT}"
 echo
 
+# Instruction for setting project ID
+echo "${MAGENTA_TEXT}${BOLD_TEXT}Fetching the current project ID...${RESET_FORMAT}"
+export PROJECT_ID=$(gcloud config get-value project)
 gcloud scc muteconfigs create muting-pga-findings \
   --description="Mute rule for VPC Flow Logs" \
-  --organization=ORG_ID \
   --filter='category="FLOW_LOGS_DISABLED"'
 
 gcloud compute networks create scc-lab-net --subnet-mode=auto
@@ -63,3 +65,4 @@ echo "${GREEN_TEXT}||                                                   ||${RESE
 echo "${GREEN_TEXT}||      Don't forget to ${RED_TEXT}${BOLD_TEXT}LIKE,${RESET_FORMAT} ${RED_TEXT}${BOLD_TEXT}SHARE${RESET_FORMAT} ${GREEN_TEXT}and${RESET_FORMAT} ${RED_TEXT}${BOLD_TEXT}SUBSCRIBE${RESET_FORMAT}${GREEN_TEXT}    ||${RESET_FORMAT}"
 echo "${GREEN_TEXT}=======================================================${RESET_FORMAT}"
 echo ""
+
