@@ -24,7 +24,7 @@
 gcloud services enable documentai.googleapis.com
 gcloud services enable storage.googleapis.com
 ```
-```
+```bash
 curl -LO raw.githubusercontent.com/sudhajobs0107/solutions/refs/heads/main/Optical%20Character%20Recognition%20(OCR)%20with%20Document%20AI%20Python/techloothub1138.sh
 sudo chmod +x techloothub1138.sh
 ./techloothub1138.sh
