@@ -42,7 +42,6 @@ echo "${MAGENTA_TEXT}${BOLD_TEXT}Fetching the current project ID...${RESET_FORMA
 export PROJECT_ID=$(gcloud config get-value project)
 echo $PROJECT_ID
 gcloud auth list
-export PROJECT_ID=$(gcloud config get-value project)
 gcloud services enable texttospeech.googleapis.com
 sudo apt-get install -y virtualenv
 python3 -m venv venv
