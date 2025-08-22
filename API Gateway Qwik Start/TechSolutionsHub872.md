@@ -21,9 +21,9 @@
 <p><strong>☁️ Run in Cloud Shell:</strong></p>
 
 ```bash
-curl -LO raw.githubusercontent.com/sudhajobs0107/solutions/refs/heads/main/API%20Gateway%20Qwik%20Start/techsolutionshub.sh
-sudo chmod +x techsolutionshub.sh
-./techsolutionshub.sh
+curl -LO raw.githubusercontent.com/sudhajobs0107/solutions/refs/heads/main/API%20Gateway%20Qwik%20Start/techsolutionshub872.sh
+sudo chmod +x techsolutionshub872.sh
+./techsolutionshub872.sh
 ```
 </div>
 
