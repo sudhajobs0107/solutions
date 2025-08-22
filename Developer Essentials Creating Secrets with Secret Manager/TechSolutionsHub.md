@@ -21,9 +21,9 @@
 <p><strong>☁️ Run in Cloud Shell:</strong></p>
 
 ```bash
-curl -LO raw.githubusercontent.com/sudhajobs0107/solutions/refs/heads/main/Developer%20Essentials%20Creating%20Secrets%20with%20Secret%20Manager/techloothub.sh
-sudo chmod +x techloothub.sh
-./techloothub.sh
+curl -LO raw.githubusercontent.com/sudhajobs0107/solutions/refs/heads/main/Developer%20Essentials%20Creating%20Secrets%20with%20Secret%20Manager/techsolutionshub.sh
+sudo chmod +x techsolutionshub.sh
+./techsolutionshub.sh
 ```
 </div>
 
@@ -32,10 +32,10 @@ sudo chmod +x techloothub.sh
 ## 🎉 **Congratulations! Lab Completed Successfully!** 🏆  
 
 <div align="center" style="padding: 5px;">
-  <h3>📱 Join the TechLootHub Community</h3>
+  <h3>📱 Join the TechSolutionsHub Community</h3>
   
-  <a href="https://www.youtube.com/@techloothub">
-    <img src="https://img.shields.io/badge/Subscribe-TechLootHub-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube Channel">
+  <a href="https://www.youtube.com/@techsolutionshub01">
+    <img src="https://img.shields.io/badge/Subscribe-TechSolutionsHub-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube Channel">
   </a>
   &nbsp;
   <a href="https://www.linkedin.com/in/sudhajobs0107/">
