@@ -37,11 +37,6 @@ echo "${YELLOW_TEXT}||           ${BOLD_TEXT}INITIATING EXECUTION...${RESET_FORM
 echo "${YELLOW_TEXT}===================================================${RESET_FORMAT}"
 echo
 
-# Instruction for setting project ID
-echo "${MAGENTA_TEXT}${BOLD_TEXT}Fetching the current project ID...${RESET_FORMAT}"
-export PROJECT_ID=$(gcloud config get-value project)
-echo $PROJECT_ID
-gcloud auth list
 bq query --use_legacy_sql=false '#standardSQL
 SELECT
 fullVisitorId
