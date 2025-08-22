@@ -21,9 +21,9 @@
 <p><strong>☁️ Follow video and Run in Cloud Shell :-</strong></p>
 
 ```
-curl -LO raw.githubusercontent.com/sudhajobs0107/solutions/refs/heads/main/VPC%20Flow%20Logs%20Analyzing%20Network%20Traffic/techloothub212.sh
-sudo chmod +x techloothub212.sh
-./techloothub212.sh
+curl -LO raw.githubusercontent.com/sudhajobs0107/solutions/refs/heads/main/VPC%20Flow%20Logs%20Analyzing%20Network%20Traffic/techsolutionshub212.sh
+sudo chmod +x techsolutionshub212.sh
+./techsolutionshub212.sh
 ```
 ---
 ### **Sink Name :- `vpc-flows`**
@@ -33,10 +33,10 @@ sudo chmod +x techloothub212.sh
 ## 🎉 **Congratulations! Lab Completed Successfully!** 🏆  
 
 <div align="center" style="padding: 5px;">
-  <h3>📱 Join the TechLootHub Community</h3>
+  <h3>📱 Join the TechSolutionsHub Community</h3>
   
-  <a href="https://www.youtube.com/@techloothub">
-    <img src="https://img.shields.io/badge/Subscribe-TechLootHub-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube Channel">
+  <a href="https://www.youtube.com/@techsolutionshub01">
+    <img src="https://img.shields.io/badge/Subscribe-TechSolutionsHub-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube Channel">
   </a>
   &nbsp;
   <a href="https://www.linkedin.com/in/sudhajobs0107/">
