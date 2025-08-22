@@ -166,5 +166,5 @@ echo "${GREEN_TEXT}${BOLD_TEXT}=================================================
 echo "${GREEN_TEXT}${BOLD_TEXT}              LAB COMPLETED SUCCESSFULLY!              ${RESET_FORMAT}"
 echo "${GREEN_TEXT}${BOLD_TEXT}=======================================================${RESET_FORMAT}"
 echo ""
-echo -e "${RED_TEXT}${BOLD_TEXT}Subscribe my Channel (TechLootHub):${RESET_FORMAT} ${BLUE_TEXT}${BOLD_TEXT}https://www.youtube.com/@techloothub${RESET_FORMAT}"
+echo -e "${RED_TEXT}${BOLD_TEXT}Subscribe my Channel (TechSolutionsHub):${RESET_FORMAT} ${BLUE_TEXT}${BOLD_TEXT}https://www.youtube.com/@techsolutionshub01${RESET_FORMAT}"
 
