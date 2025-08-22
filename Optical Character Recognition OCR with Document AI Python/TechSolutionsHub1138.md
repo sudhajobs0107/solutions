@@ -25,9 +25,9 @@ gcloud services enable documentai.googleapis.com
 gcloud services enable storage.googleapis.com
 ```
 ```
-curl -LO raw.githubusercontent.com/sudhajobs0107/solutions/refs/heads/main/Optical%20Character%20Recognition%20OCR%20with%20Document%20AI%20Python/techloothub1138.sh
-sudo chmod +x techloothub1138.sh
-./techloothub1138.sh
+curl -LO raw.githubusercontent.com/sudhajobs0107/solutions/refs/heads/main/Optical%20Character%20Recognition%20OCR%20with%20Document%20AI%20Python/techsolutionshub1138.sh
+sudo chmod +x techsolutionshub1138.sh
+./techsolutionshub1138.sh
 ```
 </div>
 ---
@@ -35,10 +35,10 @@ sudo chmod +x techloothub1138.sh
 ## 🎉 **Congratulations! Lab Completed Successfully!** 🏆  
 
 <div align="center" style="padding: 5px;">
-  <h3>📱 Join the TechLootHub Community</h3>
+  <h3>📱 Join the TechSolutionsHub Community</h3>
   
-  <a href="https://www.youtube.com/@techloothub">
-    <img src="https://img.shields.io/badge/Subscribe-TechLootHub-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube Channel">
+  <a href="https://www.youtube.com/@techsolutionshub01">
+    <img src="https://img.shields.io/badge/Subscribe-TechSolutionsHub-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube Channel">
   </a>
   &nbsp;
   <a href="https://www.linkedin.com/in/sudhajobs0107/">
