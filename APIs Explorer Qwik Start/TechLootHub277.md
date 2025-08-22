@@ -21,19 +21,19 @@
 <p><strong>☁️ Follow video and Run in Cloud Shell :-</strong></p>
 
 ```
-curl -LO raw.githubusercontent.com/sudhajobs0107/solutions/refs/heads/main/APIs%20Explorer%20Qwik%20Start/techloothub277.sh
-sudo chmod +x techloothub277.sh
-./techloothub277.sh
+curl -LO raw.githubusercontent.com/sudhajobs0107/solutions/refs/heads/main/APIs%20Explorer%20Qwik%20Start/techsolutionshub277.sh
+sudo chmod +x techsolutionshub277.sh
+./techsolutionshub277.sh
 ```
 </div>
 
 ## 🎉 **Congratulations! Lab Completed Successfully!** 🏆  
 
 <div align="center" style="padding: 5px;">
-  <h3>📱 Join the TechLootHub Community</h3>
+  <h3>📱 Join the TechSolutionsHub Community</h3>
   
-  <a href="https://www.youtube.com/@techloothub">
-    <img src="https://img.shields.io/badge/Subscribe-TechLootHub-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube Channel">
+  <a href="https://www.youtube.com/@techsolutionshub01">
+    <img src="https://img.shields.io/badge/Subscribe-TechSolutionsHub-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube Channel">
   </a>
   &nbsp;
   <a href="https://www.linkedin.com/in/sudhajobs0107/">
