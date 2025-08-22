@@ -23,7 +23,7 @@
 ```
 28 Snowbird Lane, Wasilla,ak, 99683  United States
 ```
-### ☁️ From the top menu bar, select **`Extensions`** > **`Apps Script`**
+### ☁️ From the top menu bar, select **`Extensions`** → **`Apps Script`**
 
 ### ☁️ Update `Code.gs` with Custom Script Logic
 
