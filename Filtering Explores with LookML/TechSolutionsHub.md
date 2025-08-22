@@ -92,10 +92,10 @@ explore: events {
 ## 🎉 **Congratulations! Lab Completed Successfully!** 🏆  
 
 <div align="center" style="padding: 5px;">
-  <h3>📱 Join the TechLootHub Community</h3>
+  <h3>📱 Join the TechSolutionsHub Community</h3>
   
-  <a href="https://www.youtube.com/@techloothub">
-    <img src="https://img.shields.io/badge/Subscribe-TechLootHub-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube Channel">
+  <a href="https://www.youtube.com/@techsolutionshub01">
+    <img src="https://img.shields.io/badge/Subscribe-TechSolutionsHub-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube Channel">
   </a>
   &nbsp;
   <a href="https://www.linkedin.com/in/sudhajobs0107/">
