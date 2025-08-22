@@ -41,8 +41,6 @@ echo
 echo "${MAGENTA_TEXT}${BOLD_TEXT}Fetching the current project ID...${RESET_FORMAT}"
 export PROJECT_ID=$(gcloud config get-value project)
 echo $PROJECT_ID
-
-
 bq query --use_legacy_sql=false '#standardSQL
 SELECT
 fullVisitorId
