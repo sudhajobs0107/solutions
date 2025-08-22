@@ -21,9 +21,9 @@
 <p><strong>☁️ Run in Cloud Shell:</strong></p>
 
 ```bash
-curl -LO raw.githubusercontent.com/sudhajobs0107/solutions/refs/heads/main/Terraform%20Essentials%20Firewall%20Policy/techsolutionhub.sh
-sudo chmod +x techsolutionhub.sh
-./techsolutionhub.sh
+curl -LO raw.githubusercontent.com/sudhajobs0107/solutions/refs/heads/main/Terraform%20Essentials%20Firewall%20Policy/techsolutionshub.sh
+sudo chmod +x techsolutionshub.sh
+./techsolutionshub.sh
 ```
 </div>
 
