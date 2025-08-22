@@ -41,9 +41,20 @@ echo
 echo "${MAGENTA_TEXT}${BOLD_TEXT}Fetching the current project ID...${RESET_FORMAT}"
 export PROJECT_ID=$(gcloud config get-value project)
 echo $PROJECT_ID
+gcloud auth list
+
+export ZONE=$(gcloud compute project-info describe --format="value(commonInstanceMetadata.items[google-compute-default-zone])")
+
+export REGION=$(gcloud compute project-info describe --format="value(commonInstanceMetadata.items[google-compute-default-region])")
+
+gcloud config set compute/region "$REGION"
+
 export BUCKET_NAME=$PROJECT_ID
 
 bq query --use_legacy_sql=false 'SELECT start_station_name, COUNT(*) AS num FROM `bigquery-public-data.london_bicycles.cycle_hire` GROUP BY start_station_name ORDER BY num DESC'
+
+
+SELECT end_station_name FROM `bigquery-public-data.london_bicycles.cycle_hire`;
 
 bq query --use_legacy_sql=false 'SELECT end_station_name, COUNT(*) AS num FROM `bigquery-public-data.london_bicycles.cycle_hire` GROUP BY end_station_name ORDER BY num DESC'
 
@@ -53,12 +64,17 @@ curl -O https://github.com/sudhajobs0107/solutions/blob/main/Introduction%20to%2
 
 curl -O https://github.com/sudhajobs0107/solutions/blob/main/Introduction%20to%20SQL%20for%20BigQuery%20and%20Cloud%20SQL/end_station_data.csv
 
+
 gsutil cp *start_station_data.csv gs://$PROJECT_ID/
+
 gsutil cp *end_station_data.csv gs://$PROJECT_ID/
 
 gcloud sql instances create my-demo --tier=db-n1-standard-2 --region=$REGION --root-password=Password
 
+
 gcloud sql databases create bike --instance=my-demo
+
+
 # Completion Message
 echo
 echo "${GREEN_TEXT}=======================================================${RESET_FORMAT}"
