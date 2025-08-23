@@ -37,44 +37,15 @@ echo "${YELLOW_TEXT}||           ${BOLD_TEXT}INITIATING EXECUTION...${RESET_FORM
 echo "${YELLOW_TEXT}===================================================${RESET_FORMAT}"
 echo
 
-# Instruction for setting project ID
-echo "${MAGENTA_TEXT}${BOLD_TEXT}Fetching the current project ID...${RESET_FORMAT}"
-export PROJECT_ID=$(gcloud config get-value project)
-echo $PROJECT_ID
-gcloud auth list
-export REGION=$(gcloud compute project-info describe --format="value(commonInstanceMetadata.items[google-compute-default-region])")
-
-gcloud auth list
-gcloud config set dataproc/region $REGION
-gcloud compute zones list --filter="region:($REGION)"
-export ZONE=$(gcloud compute zones list --filter="region:($REGION)" --format="value(name)" | head -n 1)
-
-PROJECT_ID=$(gcloud config get-value project) && \
-gcloud config set project $PROJECT_ID
-
-PROJECT_NUMBER=$(gcloud projects describe $PROJECT_ID --format='value(projectNumber)')
-
-gcloud projects add-iam-policy-binding $PROJECT_ID \
-  --member=serviceAccount:$PROJECT_NUMBER-compute@developer.gserviceaccount.com \
-  --role=roles/storage.admin
-
-gcloud projects add-iam-policy-binding $DEVSHELL_PROJECT_ID \
-    --member serviceAccount:$PROJECT_NUMBER-compute@developer.gserviceaccount.com \
-    --role roles/storage.objectAdmin
-
-gcloud projects add-iam-policy-binding $DEVSHELL_PROJECT_ID \
-    --member serviceAccount:$PROJECT_NUMBER-compute@developer.gserviceaccount.com \
-    --role roles/dataproc.worker
-
-gcloud compute networks subnets update default \
-    --region $REGION \
-    --enable-private-ip-google-access
-
-gcloud dataproc clusters create example-cluster --region $REGION --zone $ZONE --worker-boot-disk-size 500 --worker-machine-type=e2-standard-4 --master-machine-type=e2-standard-4
-
-gcloud dataproc jobs submit spark --cluster example-cluster --region $REGION \
-  --class org.apache.spark.examples.SparkPi \
-  --jars file:///usr/lib/spark/examples/jars/spark-examples.jar -- 1000
+gcloud services enable \
+  dataplex.googleapis.com --project=$DEVSHELL_PROJECT_ID
+gcloud dataplex lakes create ecommerce --location=$REGION --display-name="Ecommerce" --description="subscribe to techcps"
+gcloud dataplex zones create orders-curated-zone --location=$REGION --lake=ecommerce --display-name="Orders Curated Zone" --resource-location-type=SINGLE_REGION --type=CURATED --discovery-enabled --discovery-schedule="0 * * * *"
+bq mk --location=$REGION --dataset orders 
+gcloud dataplex assets create orders-curated-dataset --location=$REGION --lake=ecommerce --zone=orders-curated-zone --display-name="Orders Curated Dataset" --resource-type=BIGQUERY_DATASET --resource-name=projects/$DEVSHELL_PROJECT_ID/datasets/orders --discovery-enabled 
+gcloud dataplex assets delete orders-curated-dataset --location=$REGION --zone=orders-curated-zone --lake=ecommerce --quiet
+gcloud dataplex zones delete orders-curated-zone --location=$REGION --lake=ecommerce --quiet
+gcloud dataplex lakes delete ecommerce --location=$REGION --quiet 
 # Completion Message
 echo
 echo "${GREEN_TEXT}=======================================================${RESET_FORMAT}"
