@@ -9,6 +9,7 @@ BLUE_TEXT=$'\033[0;94m'
 MAGENTA_TEXT=$'\033[0;95m'
 CYAN_TEXT=$'\033[0;96m'
 WHITE_TEXT=$'\033[0;97m'
+BG_MAGENTA=`tput setab 5`
 
 NO_COLOR=$'\033[0m'
 RESET_FORMAT=$'\033[0m'
@@ -37,6 +38,10 @@ echo "${YELLOW_TEXT}||           ${BOLD_TEXT}INITIATING EXECUTION...${RESET_FORM
 echo "${YELLOW_TEXT}===================================================${RESET_FORMAT}"
 echo
 
+read -p "${BG_MAGENTA}${BOLD_TEXT}Enter your PROJECT ID:-${RESET_FORMAT} " PROJECT_ID
+export PROJECT_ID
+# Set project in gcloud config
+gcloud config set project "$PROJECT_ID"
 bq query --use_legacy_sql=false \
 "
 #standardSQL
