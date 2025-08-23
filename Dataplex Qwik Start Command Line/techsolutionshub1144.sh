@@ -40,6 +40,7 @@ echo
 
 read -p "${BG_MAGENTA}${BOLD_TEXT}Enter your REGION:-${RESET_FORMAT} " REGION
 export REGION
+
 gcloud services enable \
   dataplex.googleapis.com --project=$DEVSHELL_PROJECT_ID
 gcloud dataplex lakes create ecommerce --location=$REGION --display-name="Ecommerce" --description="subscribe to techcps"
