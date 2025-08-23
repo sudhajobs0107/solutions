@@ -26,8 +26,7 @@
 
 ```
 curl -LO raw.githubusercontent.com/sudhajobs0107/solutions/refs/heads/main/Build%20a%20Serverless%20Web%20App%20with%20Firebase/techsolutionshub643.sh
-sudo chmod +x techsolutionshub643.sh
-./techsolutionshub643.sh
+source techsolutionshub643.sh
 ```
 ---
 
