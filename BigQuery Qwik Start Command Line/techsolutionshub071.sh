@@ -64,7 +64,7 @@ bq query --use_legacy_sql=false \
 
 bq mk babynames
 
-wget http://www.ssa.gov/OACT/babynames/names.zip
+wget https://github.com/sudhajobs0107/solutions/blob/main/BigQuery%20Qwik%20Start%20Command%20Line/names.zip
 ls
 unzip names.zip
 ls
