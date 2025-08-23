@@ -60,13 +60,12 @@ bq query --use_legacy_sql=false \
 
 bq mk babynames
 
-wget https://github.com/sudhajobs0107/solutions/blob/main/BigQuery%20Qwik%20Start%20Command%20Line/names.zip
-ls
+wget http://www.ssa.gov/OACT/babynames/names.zip
+
 unzip names.zip
-ls
+
 bq load babynames.names2010 yob2010.txt name:string,gender:string,count:integer
-bq ls babynames
-bq show babynames.names2010
+
 bq query "SELECT name,count FROM babynames.names2010 WHERE gender = 'F' ORDER BY count DESC LIMIT 5"
 
 bq query "SELECT name,count FROM babynames.names2010 WHERE gender = 'M' ORDER BY count ASC LIMIT 5"
