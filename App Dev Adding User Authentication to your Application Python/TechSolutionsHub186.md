@@ -26,7 +26,7 @@ sudo chmod +x techsolutionshub186.sh
 ./techsolutionshub186.sh
 ```
 ---
-### 🚨Now watch video for `Task 3`.
+### 🚨Now follow video for `Task 3`.
 ---
 </div>
 
