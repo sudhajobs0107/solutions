@@ -25,6 +25,9 @@ curl -LO raw.githubusercontent.com/sudhajobs0107/solutions/refs/heads/main/App%2
 sudo chmod +x techsolutionshub186.sh
 ./techsolutionshub186.sh
 ```
+---
+### 🚨Now watch video for `Task 3`.
+---
 </div>
 
 ## 🎉 **Congratulations! Lab Completed Successfully!** 🏆  
