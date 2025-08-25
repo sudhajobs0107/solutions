@@ -222,7 +222,7 @@ EOF_END
 
 
 
-wget https://storage.googleapis.com/cloud-training/techsolutionshub/wildlife.jpg
+wget https://storage.googleapis.com/cloud-training/arc102/wildlife.jpg
 
 gsutil cp wildlife.jpg gs://$BUCKET_NAME
 
