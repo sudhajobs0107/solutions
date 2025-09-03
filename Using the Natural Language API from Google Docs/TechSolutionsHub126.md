@@ -17,7 +17,7 @@
 
 ## ⚙️ Lab Environment Setup
 
-## Create an `API key` → Navigation Menu → click `APIs & Services` → click `Credentials` → select `Create credentials`
+## Create an `API key` → Navigation Menu → click `APIs & Services` → click `Credentials` → select `Create credentials` → click `API key`
 
 ## Open [Google Doc](https://docs.google.com/document/create) in a new tab. Now go to `Extensions` → `Apps Script` :-
 
