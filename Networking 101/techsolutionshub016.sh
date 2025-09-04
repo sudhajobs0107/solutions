@@ -50,17 +50,20 @@ echo "${BG_MAGENTA}${BOLD_TEXT}Project ID is:-${RESET_FORMAT} $PROJECT_ID"
 
 gcloud auth list
 
-read -p "${BG_MAGENTA}${BOLD_TEXT}Enter your REGION 1:-${RESET_FORMAT} " REGION1
+read -p "${BG_MAGENTA}${BOLD_TEXT}Enter your REGION 1:-${RESET_FORMAT} " REGION_1
+export REGION_1
 
-gcloud config set compute/zone $REGION1
+gcloud config set compute/region $REGION_1
 
-read -p "${BG_MAGENTA}${BOLD_TEXT}Enter your REGION 2:-${RESET_FORMAT} " REGION2
+read -p "${BG_MAGENTA}${BOLD_TEXT}Enter your REGION 2:-${RESET_FORMAT} " REGION_2
+export REGION_2
 
-gcloud config set compute/zone $REGION2
+gcloud config set compute/region $REGION_2
 
-read -p "${BG_MAGENTA}${BOLD_TEXT}Enter your REGION 3:-${RESET_FORMAT} " REGION3
+read -p "${BG_MAGENTA}${BOLD_TEXT}Enter your REGION 3:-${RESET_FORMAT} " REGION_3
+export REGION_3
 
-gcloud config set compute/zone $REGION3
+gcloud config set compute/region $REGION_3
 
 
 
