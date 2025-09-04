@@ -38,16 +38,6 @@ echo "${YELLOW_TEXT}||           ${BOLD_TEXT}INITIATING EXECUTION...${RESET_FORM
 echo "${YELLOW_TEXT}===================================================${RESET_FORMAT}"
 echo
 
-# Instruction for setting project ID
-echo "${MAGENTA_TEXT}${BOLD_TEXT}Fetching the current project ID...${RESET_FORMAT}"
-PROJECT_ID=$(gcloud config get-value project 2> /dev/null)
-if [[ "$PROJECT_ID" == "(unset)" || -z "$PROJECT_ID" ]]; then
-  PROJECT_ID=$(gcloud projects list --format="value(projectId)" --limit=1)
-  gcloud config set project $PROJECT_ID
-fi
-export PROJECT_ID
-echo "${BG_MAGENTA}${BOLD_TEXT}Project ID is:-${RESET_FORMAT} $PROJECT_ID"
-
 gcloud auth list
 
 read -p "${BG_MAGENTA}${BOLD_TEXT}Enter the CLUSTER_NAME:-${RESET_FORMAT} " CLUSTER_NAME
