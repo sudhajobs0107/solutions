@@ -88,7 +88,7 @@ while true; do
         echo "Dataflow job completed and running successfully."
         break
     else
-        echo "${BG_MAGENTA}${BOLD_TEXT}Dataflow job retrying. Please subscribe to TechSolutionsHub${RESET_FORMAT} ${CYAN_TEXT}https://www.youtube.com/@techsolutionshub01{RESET_FORMAT}"
+        echo "${BG_MAGENTA}${BOLD_TEXT}Dataflow job retrying. Please subscribe to TechSolutionsHub${RESET_FORMAT} ${CYAN_TEXT}https://www.youtube.com/@techsolutionshub01${RESET_FORMAT}"
         sleep 30
     fi
 done
