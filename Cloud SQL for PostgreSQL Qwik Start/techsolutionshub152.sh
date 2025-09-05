@@ -47,11 +47,12 @@ if [[ "$PROJECT_ID" == "(unset)" || -z "$PROJECT_ID" ]]; then
 fi
 export PROJECT_ID
 echo "${BG_MAGENTA}${BOLD_TEXT}Project ID is:-${RESET_FORMAT} $PROJECT_ID"
+
 gcloud auth list
 
 export REGION=$(gcloud compute project-info describe --format="value(commonInstanceMetadata.items[google-compute-default-region])")
 
-echo $REGION
+echo "${BG_MAGENTA}${BOLD_TEXT}Region :-${RESET_FORMAT} $REGION"
 
 gcloud config set compute/region $REGION
 
