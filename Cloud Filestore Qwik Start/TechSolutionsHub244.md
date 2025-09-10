@@ -25,23 +25,6 @@ curl -LO raw.githubusercontent.com/sudhajobs0107/solutions/refs/heads/main/Cloud
 sudo chmod +x techsolutionshub244.sh
 ./techsolutionshub244.sh
 ```
-```
-gcloud healthcare fhir-stores export bq de_id \
---dataset=$DATASET_ID \
---location=$LOCATION \
---bq-dataset=bq://$PROJECT_ID.de_id \
---schema-type=analytics
-```
----
-```
-SELECT
-  id AS patient_id,
-  name[safe_offset(0)].given AS given_name,
-  name[safe_offset(0)].family AS family,
-  birthDate AS birth_date
-FROM dataset1.Patient LIMIT 10
-```
----
 </div>
 
 ## 🎉 **Congratulations! Lab Completed Successfully!** 🏆  
