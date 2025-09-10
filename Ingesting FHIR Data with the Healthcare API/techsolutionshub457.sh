@@ -101,10 +101,10 @@ gcloud healthcare datasets create $DATASET_ID \
 gcloud pubsub topics create fhir-topic
 
 
-gcloud healthcare fhir-stores create ${FHIR_STORE_ID} --project=$DEVSHELL_PROJECT_ID --dataset=${DATASET_ID} --location=${LOCATION} --version=R4 --pubsub-topic=projects/${PROJECT_ID}/topics/${TOPIC} --enable-update-create --disable-referential-integrity
+gcloud healthcare fhir-stores create ${FHIR_STORE_ID} --project=$PROJECT_ID --dataset=${DATASET_ID} --location=${LOCATION} --version=R4 --pubsub-topic=projects/${PROJECT_ID}/topics/${TOPIC} --enable-update-create --disable-referential-integrity
 
 
-gcloud healthcare fhir-stores create de_id --project=$DEVSHELL_PROJECT_ID --dataset=${DATASET_ID} --location=${LOCATION} --version=R4 --pubsub-topic=projects/${PROJECT_ID}/topics/${TOPIC} --enable-update-create --disable-referential-integrity
+gcloud healthcare fhir-stores create de_id --project=$PROJECT_ID --dataset=${DATASET_ID} --location=${LOCATION} --version=R4 --pubsub-topic=projects/${PROJECT_ID}/topics/${TOPIC} --enable-update-create --disable-referential-integrity
 
 
 gcloud healthcare fhir-stores import gcs $FHIR_STORE_ID \
@@ -124,7 +124,7 @@ export REGION=$(gcloud compute project-info describe --format="value(commonInsta
 
 echo ""
 
-echo "${BG_MAGENTA}${BOLD_TEXT}Open this link :-${RESET_FORMAT}https://console.cloud.google.com/healthcare/browser/locations/$REGION/datasets/dataset1/datastores?invt=AbuLrg&project=$DEVSHELL_PROJECT_ID"
+echo "${BG_MAGENTA}${BOLD_TEXT}Open this link :-${RESET_FORMAT}https://console.cloud.google.com/healthcare/browser/locations/$REGION/datasets/dataset1/datastores?invt=AbuLrg&project=$PROJECT_ID"
 
 echo ""
 
