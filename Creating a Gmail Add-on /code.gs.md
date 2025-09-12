@@ -1,3 +1,4 @@
+```
 /**
  * Copyright Google LLC
  *
@@ -115,3 +116,4 @@ function getLabelArray(labelsObjects){
   labels.sort();
   return labels;
 }
+```
