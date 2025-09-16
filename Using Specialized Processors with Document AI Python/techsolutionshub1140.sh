@@ -46,7 +46,7 @@ if [[ "$PROJECT_ID" == "(unset)" || -z "$PROJECT_ID" ]]; then
   gcloud config set project $PROJECT_ID
 fi
 export PROJECT_ID
-echo "${BG_MAGENTA}${BOLD_TEXT}🧩Project ID is:-${RESET_FORMAT} $PROJECT_ID"
+echo "${BG_MAGENTA}${BOLD_TEXT}🧩 Project ID is:-${RESET_FORMAT} $PROJECT_ID"
 
 gcloud auth list
 
