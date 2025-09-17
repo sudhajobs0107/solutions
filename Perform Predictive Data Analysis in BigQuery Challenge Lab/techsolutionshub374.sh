@@ -50,6 +50,7 @@ echo "🧩 ${BG_MAGENTA}${BOLD_TEXT}Project ID is:-${RESET_FORMAT} $PROJECT_ID"
 
 gcloud auth list
 
+
 # --- Prompt for Required Inputs ---
 read -rp "${BG_MAGENTA}${BOLD_TEXT}Enter event table name:-${RESET_FORMAT} " EVENT
 read -rp "${BG_MAGENTA}${BOLD_TEXT}Enter table name:-${RESET_FORMAT} " TABLE
