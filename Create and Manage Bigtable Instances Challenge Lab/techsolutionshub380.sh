@@ -169,7 +169,7 @@ gcloud bigtable backups delete PersonalizedProducts_7 \
   --instance=ecommerce-recommendations \
   --cluster=ecommerce-recommendations-c1 --quiet
 
-# gcloud bigtable instances delete ecommerce-recommendations --quiet
+gcloud bigtable instances delete ecommerce-recommendations --quiet
 
 
 # Completion Message
