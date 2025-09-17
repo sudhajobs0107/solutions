@@ -51,7 +51,7 @@ echo "🧩 ${BG_MAGENTA}${BOLD_TEXT}Project ID is:-${RESET_FORMAT} $PROJECT_ID"
 gcloud auth list
 
 # Ask user for REGION
-read -rp "${BG_MAGENTA}${BOLD_TEXTEnter your region:-${RESET_FORMAT} " REGION
+read -rp "${BG_MAGENTA}${BOLD_TEXT}Enter your region:-${RESET_FORMAT} " REGION
 
 # Set project ID
 PROJECT_ID=$DEVSHELL_PROJECT_ID
