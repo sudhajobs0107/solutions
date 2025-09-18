@@ -21,18 +21,13 @@
 <p><strong>☁️ Follow video and Run in Cloud Shell :-</strong></p>
 
 ```
-curl -LO raw.githubusercontent.com/sudhajobs0107/solutions/refs/heads/main/Analyze%20Sentiment%20with%20Natural%20Language%20API%20Challenge%20Lab/techsolutionshub130.sh
-sudo chmod +x techsolutionshub130.sh
-./techsolutionshub130.sh
-```
-```
 export ZONE=
 ```
 ```
 export API_KEY=
 ```
 ```
-gcloud compute ssh lab-vm --zone=$ZONE --quiet --command "curl -LO https://raw.githubusercontent.com/sudhajobs0107/solutions/blob/main/Analyze%20Sentiment%20with%20Natural%20Language%20API%20Challenge%20Lab/techsolutionshub130-1.sh && sudo chmod +x techsolutionshub130-1.sh && ./techsolutionshub130-1.sh"
+gcloud compute ssh lab-vm --zone=$ZONE --quiet --command "curl -LO https://raw.githubusercontent.com/sudhajobs0107/solutions/blob/main/Analyze%20Sentiment%20with%20Natural%20Language%20API%20Challenge%20Lab/techsolutionshub130.sh && sudo chmod +x techsolutionshub130.sh && ./techsolutionshub130.sh"
 ```
 
 </div>
