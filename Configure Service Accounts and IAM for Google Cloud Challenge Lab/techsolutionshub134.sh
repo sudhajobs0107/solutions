@@ -39,23 +39,18 @@ echo "${YELLOW_TEXT}===================================================${RESET_F
 echo
 
 # Instruction for setting project ID
-echo "${MAGENTA_TEXT}${BOLD_TEXT}Fetching the current project ID...${RESET_FORMAT}"
-PROJECT_ID=$(gcloud config get-value project 2> /dev/null)
-if [[ "$PROJECT_ID" == "(unset)" || -z "$PROJECT_ID" ]]; then
-  PROJECT_ID=$(gcloud projects list --format="value(projectId)" --limit=1)
-  gcloud config set project $PROJECT_ID
-fi
-export PROJECT_ID
-echo "🧩 ${BG_MAGENTA}${BOLD_TEXT}Project ID is:-${RESET_FORMAT} $PROJECT_ID"
+echo "${MAGENTA_TEXT}${BOLD_TEXT}Starting Execution...${RESET_FORMAT}"
 
-export ZONE=$(gcloud compute project-info describe \
+ export ZONE=$(gcloud compute project-info describe \
 --format="value(commonInstanceMetadata.items[google-compute-default-zone])")
 
 cat > prepare_disk.sh <<'EOF_END'
 
 gcloud auth login --quiet
 
-export PROJECT_ID=$DEVSHELL_PROJECT_ID
+export PROJECT_ID=$(gcloud config get-value project)
+
+echo "🧩 ${BG_MAGENTA}${BOLD_TEXT}Project ID is:-${RESET_FORMAT} $PROJECT_ID"
 
 export ZONE=$(gcloud compute project-info describe \
 --format="value(commonInstanceMetadata.items[google-compute-default-zone])")
@@ -147,6 +142,9 @@ EOF_END
 gcloud compute scp prepare_disk.sh bigquery-instance:/tmp --project=$DEVSHELL_PROJECT_ID --zone=$ZONE --quiet
 
 gcloud compute ssh bigquery-instance --project=$DEVSHELL_PROJECT_ID --zone=$ZONE --quiet --command="bash /tmp/prepare_disk.sh"
+
+
+
 
 
 # Completion Message
