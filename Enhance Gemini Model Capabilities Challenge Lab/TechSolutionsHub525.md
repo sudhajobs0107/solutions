@@ -43,7 +43,7 @@ Config = GenerateContentConfig(tools=[google_search_tool])
 ## `Task 4`
 ```
 Query remove the starting lines & add = f"{model} price at {retailer}" 
-response_schema=response_schema,
+response_schema = response_schema,
 ```
 </div>
 
