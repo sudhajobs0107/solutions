@@ -21,6 +21,10 @@
 <p><strong>☁️ Follow video and Run in Cloud Shell :-</strong></p>
 
 ```
+gcloud compute ssh --zone "your_Zone" "lab-vm" --project "your_Project_ID"
+```
+
+```
 curl -LO raw.githubusercontent.com/sudhajobs0107/solutions/refs/heads/main/Cloud%20Speech%20API%203%20Ways%20Challenge%20Lab/techsolutionshub132.sh
 sudo chmod +x techsolutionshub132.sh
 ./techsolutionshub132.sh
