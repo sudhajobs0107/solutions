@@ -36,7 +36,7 @@ Generate and run code for the calculation."""
 ```
 google_search_tool = Tool(google_search=GoogleSearch())
 
-update the prompt = " what are the "
+update the prompt = " What are the key features of the Nike Air Jordan XXXVI? "
 
 Config = GenerateContentConfig(tools=[google_search_tool])
 ```
