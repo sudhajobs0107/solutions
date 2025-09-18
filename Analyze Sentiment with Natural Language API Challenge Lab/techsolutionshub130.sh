@@ -52,7 +52,7 @@ gcloud auth list
 
 # Fetch zone of existing VM named 'lab-vm'
 export ZONE=$(gcloud compute instances list --filter="name=lab-vm" --format="value(zone)")
-echo "Detected VM zone: $ZONE"
+echo "${BG_MAGENTA}${BOLD_TEXT}Detected VM zone:-${RESET_FORMAT} $ZONE"
 
 API_KEY_JSON=$(gcloud services api-keys create \
   --display-name="API key" \
@@ -63,13 +63,7 @@ API_KEY=$(echo "$API_KEY_JSON" | jq -r '.keyString // .response.keyString')
 
 
 # Print confirmation
-echo "Generated API Key: $API_KEY"
-
-# SSH into the VM and execute the remote script
-gcloud compute ssh lab-vm --zone=$ZONE --quiet --command \
-"curl -LO https://raw.githubusercontent.com/sudhajobs0107/solutions/blob/main/Analyze%20Sentiment%20with%20Natural%20Language%20API%20Challenge%20Lab/techsolutionshub130-1.sh && \
-chmod +x techsolutionshub130-1.sh && \
-API_KEY=$API_KEY ./techsolutionshub130-1.sh"
+echo "${BG_MAGENTA}${BOLD_TEXT}Created API Key:-${RESET_FORMAT} $API_KEY"
 
 # Completion Message
 echo
