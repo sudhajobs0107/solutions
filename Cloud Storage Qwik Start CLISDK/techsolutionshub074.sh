@@ -46,28 +46,68 @@ if [[ "$PROJECT_ID" == "(unset)" || -z "$PROJECT_ID" ]]; then
   gcloud config set project $PROJECT_ID
 fi
 export PROJECT_ID
-echo "${BG_MAGENTA}${BOLD_TEXT}Project ID is:-${RESET_FORMAT} $PROJECT_ID"
+echo "🧩 ${BG_MAGENTA}${BOLD_TEXT}Project ID is:-${RESET_FORMAT} $PROJECT_ID"
+
 gcloud auth list
 
-gcloud config list project
+export PROJECT_ID=$DEVSHELL_PROJECT_ID
 
-gsutil mb gs://$PROJECT_ID-techsolutionshub
 
-curl https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Ada_Lovelace_portrait.jpg/800px-Ada_Lovelace_portrait.jpg --output ada.jpg
+# Region selection with validation
+while true; do
+    read -p "${BG_MAGENTA}${BOLD_TEXT} Enter your Region:-${RESET_FORMAT} " REGION
+    if [ -z "$REGION" ]; then
+        echo "${WARNING_COLOR}ⓘ Using default region. For production, always specify a region.${RESET_FORMAT}"
+        break
+    elif [[ $REGION =~ ^[a-z]+-[a-z]+[0-9]+$ ]]; then
+        echo "${SUCCESS_COLOR}✓ Valid region format detected${RESET_FORMAT}"
+        break
+    else
+        echo "${WARNING_COLOR}⚠ Invalid region format. Please use format like 'us-central1'${RESET_FORMAT}"
+    fi
+done
 
-gsutil cp ada.jpg gs://$PROJECT_ID-techsolutionshub
+export REGION
+gcloud config set compute/region $REGION
+echo "${ACTION_COLOR}${BOLD_TEXT}⚙️  Configuring default region to:- ${REGION}${RESET_FORMAT}"
 
-rm ada.jpg
+# Cloud Storage operations with visual indicators
+echo
+echo "${HEADER_COLOR}${BOLD_TEXT}━━━━━━━━━━━━━━━━━━ CLOUD STORAGE SETUP ━━━━━━━━━━━━━━${RESET_FORMAT}"
+echo
 
-gsutil cp -r gs://$PROJECT_ID-techsolutionshub/ada.jpg .
+echo "${ACTION_COLOR}${BOLD_TEXT}🛠️  Creating Cloud Storage bucket...${RESET_FORMAT}"
+gsutil mb gs://$DEVSHELL_PROJECT_ID
+echo "${SUCCESS_COLOR}✓ Bucket created successfully${RESET_FORMAT}"
 
-gsutil cp gs://$PROJECT_ID-techsolutionshub/ada.jpg gs://$PROJECT_ID-techsolutionshub/image-folder/
+echo
+echo "${ACTION_COLOR}${BOLD_TEXT}📥 Downloading sample image (Ada Lovelace portrait)...${RESET_FORMAT}"
+curl -# https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Ada_Lovelace_portrait.jpg/800px-Ada_Lovelace_portrait.jpg --output ada.jpg
+echo "${SUCCESS_COLOR}✓ Image downloaded successfully${RESET_FORMAT}"
 
-gsutil ls gs://$PROJECT_ID-techsolutionshub
+echo
+echo "${ACTION_COLOR}${BOLD_TEXT}☁️  Uploading image to Cloud Storage...${RESET_FORMAT}"
+gsutil cp ada.jpg gs://$DEVSHELL_PROJECT_ID
+echo "${SUCCESS_COLOR}✓ Image uploaded to bucket${RESET_FORMAT}"
 
-gsutil ls -l gs://$PROJECT_ID-techsolutionshub/ada.jpg
+echo
+echo "${ACTION_COLOR}${BOLD_TEXT}⤵️  Downloading copy from bucket...${RESET_FORMAT}"
+gsutil cp -r gs://$DEVSHELL_PROJECT_ID/ada.jpg .
+echo "${SUCCESS_COLOR}✓ Image downloaded from bucket${RESET_FORMAT}"
 
-gsutil acl ch -u AllUsers:R gs://$PROJECT_ID-techsolutionshub/ada.jpg
+echo
+echo "${ACTION_COLOR}${BOLD_TEXT}🗂️  Creating organized folder structure...${RESET_FORMAT}"
+gsutil cp gs://$DEVSHELL_PROJECT_ID/ada.jpg gs://$DEVSHELL_PROJECT_ID/image-folder/
+echo "${SUCCESS_COLOR}✓ Folder structure created${RESET_FORMAT}"
+
+echo
+echo "${ACTION_COLOR}${BOLD_TEXT}🔓 Setting public access permissions...${RESET_FORMAT}"
+gsutil acl ch -u AllUsers:R gs://$DEVSHELL_PROJECT_ID/ada.jpg
+echo "${SUCCESS_COLOR}✓ Public access configured${RESET_FORMAT}"
+
+
+
+
 
 # Completion Message
 echo
