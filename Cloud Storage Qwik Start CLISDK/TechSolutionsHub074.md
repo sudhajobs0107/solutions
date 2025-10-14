@@ -21,7 +21,7 @@
 <p><strong>☁️ Follow video and Run in Cloud Shell :-</strong></p>
 
 ```
-curl -LO raw.githubusercontent.com/sudhajobs0107/solutions/refs/heads/main/BigQuery%20Qwik%20Start%20Command%20Line/techsolutionshub074.sh
+curl -LO raw.githubusercontent.com/sudhajobs0107/solutions/refs/heads/main/Cloud%20Storage%20Qwik%20Start%20CLISDK/techsolutionshub074.sh
 sudo chmod +x techsolutionshub074.sh
 ./techsolutionshub074.sh
 ```
