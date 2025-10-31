@@ -1,14 +1,14 @@
 #!/bin/bash
 
 # Define color variables
-BLACK=$'\033[0;90m'
-RED=$'\033[0;91m'
-GREEN=$'\033[0;92m'
-YELLOW=$'\033[0;93m'
-BLUE=$'\033[0;94m'
+BLACK_TEXT=$'\033[0;90m'
+RED_TEXT=$'\033[0;91m'
+GREEN_TEXT=$'\033[0;92m'
+YELLOW_TEXT=$'\033[0;93m'
+BLUE_TEXT=$'\033[0;94m'
 MAGENTA_TEXT=$'\033[0;95m'
 CYAN_TEXT=$'\033[0;96m'
-WHITE=$'\033[0;97m'
+WHITE_TEXT=$'\033[0;97m'
 BG_MAGENTA=$'\033[45m'
 
 NO_COLOR=$'\033[0m'
